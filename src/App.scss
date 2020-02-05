@@ -1,0 +1,14 @@
+.App {
+  h1 {
+    text-align: center;
+    text-decoration: underline yellow;
+    margin: 2em;
+  }
+
+  .Card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

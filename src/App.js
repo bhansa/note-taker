@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import Card from "./Card/Card";
+import Filter from "./Filter/Filter";
+import "./App.scss";
+import dummy_card_data from "./dummy_data";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Note Taker</h1>
+      <Filter />
+      <div className="Card-container">
+        {dummy_card_data.map((data, key) => (
+          <Card title={data.title} desc={data.desc} key={key} />
+        ))}
+      </div>
     </div>
   );
 }
