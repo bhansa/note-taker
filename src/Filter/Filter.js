@@ -13,13 +13,15 @@ class Filter extends React.Component {
   }
   handleInputChange = event => {
     let inputValue = event.target.value;
+    // creating regex
+    let regex = new RegExp(inputValue, "i");
     let filteredResult = this.state.data.filter(
-      val => val.title.indexOf(inputValue) > -1
+      val => regex.test(val.title) === true || regex.test(val.desc)
     );
     this.setState({
       filteredResult: filteredResult
     });
-    console.log(this.state.filteredResult);
+    // console.log(this.state.filteredResult);
   };
   render() {
     return (

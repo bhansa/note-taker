@@ -2,7 +2,7 @@ const dummy_card_data = [
   {
     title: "Node js and explanations",
     desc:
-      "node js is a good tool for javascript programming and backend re-engineering"
+      "Test search js is a good tool for javascript programming and backend re-engineering"
   },
   {
     title: "Python js and explanations",
