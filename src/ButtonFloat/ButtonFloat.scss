@@ -1,0 +1,29 @@
+$buttonColor: #000;
+$buttonBg: yellow;
+$buttonBorderRadius: 50%;
+$buttonFontSize: 2.4em;
+$buttonPadding: 0.4em;
+
+.ButtonFloat {
+  width: 60px;
+  height: 60px;
+  background-color: $buttonBg;
+  border-radius: $buttonBorderRadius;
+  position: fixed;
+  bottom: 4%;
+  right: 2%;
+  z-index: 10;
+  box-shadow: 0 1px 5px #eee;
+  cursor: pointer;
+
+  &__icon {
+    color: $buttonColor;
+    font-size: $buttonFontSize;
+    text-align: center;
+    padding: $buttonPadding;
+
+    &:focus {
+      outline: 2px solid;
+    }
+  }
+}
